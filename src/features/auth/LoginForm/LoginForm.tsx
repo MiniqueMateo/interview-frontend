@@ -35,6 +35,7 @@ function LoginForm() {
     const onSubmit = async (data: LoginFormDataT) => {
         try {
             const body = await login(data).unwrap();
+            //setStorageToken(token, data.remember);
             navigate('/');
         } catch (err) {
             console.error(err);
